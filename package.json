@@ -32,7 +32,9 @@
     "mBaaS"
   ],
   "scripts": {
-    "test": "grunt mocha-and-karma"
+    "test": "grunt mocha-and-karma",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^0.9.0",
@@ -57,7 +59,8 @@
     "stable": "^0.1.5",
     "strong-remoting": "^3.0.0-alpha.1",
     "uid2": "0.0.3",
-    "underscore.string": "^3.0.3"
+    "underscore.string": "^3.0.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "browserify": "^10.0.0",
@@ -101,5 +104,6 @@
     "depd": "loopback-datasource-juggler/lib/browser.depd.js",
     "bcrypt": false
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
